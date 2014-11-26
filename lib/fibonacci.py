@@ -10,5 +10,14 @@ class Fibonacci:
         elif terms == 2:
             return [f1, f2]
         else:
-            # Implement an algorithm
-            return []
+            results = []
+            results.append(f1)
+            results.append(f2)
+            term = 3
+            while (term <= terms):
+                tmp = f2 + f1
+                results.append(tmp)
+                f2 = f1
+                f1 = tmp
+                term += 1
+            return results
